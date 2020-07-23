@@ -43,7 +43,7 @@ func (api CachetAPI) SendMetric(id int, lag int64) {
 	logrus.Debugf("Sending lag metric ID:%d RTT %vms", id, lag)
 
 	jsonBytes, _ := json.Marshal(map[string]interface{}{
-		"value":     lag,
+		"value":     100,
 		"timestamp": time.Now().Unix(),
 	})
 
